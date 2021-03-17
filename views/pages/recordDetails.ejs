@@ -1,0 +1,20 @@
+<section class="index">
+
+    <div>
+      <%  data.forEach(item => { %>
+
+    <p>Counrty : <%=item.country%> </p>
+    <p>TotalConfirmed :    <%=item.totalconfirmed%> </p>
+    <p>TotalDeaths :  <%=item.totaldeath%> </p>
+    <p>TotalRecovered : <%=item.totalrecovered%> </p>
+    <p>Date : <%=item.date%> </p>
+    </div>
+
+    <div>
+        <form action="/delete/<%=item.id%>?_method=delete" method="post">
+        <input type="submit" value="Delete">
+        </form>
+    </div>
+
+    <% }) %>
+</section>

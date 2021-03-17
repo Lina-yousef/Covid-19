@@ -1,0 +1,24 @@
+<section class="index">
+
+    <div>
+      <%  data.forEach(item => { %>
+
+        
+    <p>Counrty : <%=item.country%> </p>
+    <p>Date : <%=item.date%> </p>
+    </div>
+
+    <div>
+        <form action="/recordDetails" method="get">
+        <input type="hidden" name="country" value="<%=item.country%>">
+        <input type="hidden" name="totalconfirmed" value="<%=item.totalconfirmed%>">
+        <input type="hidden" name="totaldeaths" value="<%=item.totaldeath%>">
+        <input type="hidden" name="totalrecovered" value="<%=item.totalrecovered%>">
+        <input type="hidden" name="date" value="<%=item.date%> "> 
+
+        <input type="submit" value="VIEW DETAILS">  
+        </form>
+    </div>
+
+    <% }) %>
+</section>
